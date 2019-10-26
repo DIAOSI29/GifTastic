@@ -1,64 +1,70 @@
 * {
+  overflow-x: hidden;
 }
 @media screen and (max-width: 768px) {
   #name {
     position: relative;
-    display: block;
-    width: 100%;
+
+    min-width: 200px;
   }
   #search-form {
+    min-width: 210px;
     position: relative;
-    display: block;
   }
   #margin-row {
-    grid-template-columns: 1fr;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr 1fr;
   }
 }
 
 body,
 html {
-  min-width: 200px;
   color: rgb(58, 58, 58);
-  background: linear-gradient(to right, #d3d3d3, #8f8f8f);
+  background-color: rgb(142, 142, 147);
 }
 
 .button-generated {
   box-sizing: content-box;
   height: 40px;
-  font-size: 30px;
-  margin: 5px 5px;
+  font-size: 20px;
+  margin: 15px 6px;
   overflow: hidden;
   background-color: #353535;
   color: rgb(190, 184, 184);
   border: none;
 }
 
+#name {
+  /* width: 100%; */
+  overflow: initial;
+  border: 3px solid rgb(75, 74, 74);
+  border-radius: 15px;
+}
 .panel {
+  overflow-x: auto;
   box-sizing: border-box;
-  display: grid;
-  background: rgba(128, 128, 128, 0.521);
-  padding: 10px;
-  flex-direction: column;
-  width: 100%;
-  box-shadow: black;
-  box-shadow: 0 0 6px 4px rgba(17, 17, 17, 0.521);
+
+  background: rgba(58, 58, 60, 0.521);
+  border-radius: 25px;
+}
+
+.text-dark {
+  font-weight: 900;
+  border-radius: 25px;
 }
 
 #button-list {
   margin: 30px 0;
   background: rgba(59, 59, 59, 0.521);
   padding: 5px;
-
   box-sizing: border-box;
-
-  background: rgba(128, 128, 128, 0.521);
+  background: rgba(58, 58, 60, 0.521);
   padding: 10px;
-  grid-template-columns: 1fr 3fr;
-
-  box-shadow: black;
-  box-shadow: 0 0 6px 4px rgba(17, 17, 17, 0.521);
-  grid-template-columns: 1fr 3fr;
   overflow: hidden;
+  border-top: 5px solid rgb(56, 56, 56);
+  border-bottom: 5px solid rgb(56, 56, 56);
 }
 
 .header-section {
@@ -66,7 +72,7 @@ html {
   display: grid;
   position: relative;
   width: 100%;
-  place-items: center;
+  place-items: start;
 }
 
 #margin-row {
@@ -74,11 +80,12 @@ html {
   display: grid;
   background: rgba(128, 128, 128, 0.521);
   padding: 10px;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 2fr 3fr;
+  border: 5px solid rgb(56, 56, 56);
   width: 98%;
-  box-shadow: black;
-  box-shadow: 0 0 6px 4px rgba(17, 17, 17, 0.521);
-  grid-template-columns: 1fr 3fr;
+  /* box-shadow: black;
+  box-shadow: 0 0 6px 4px rgba(17, 17, 17, 0.521); */
+  grid-template-rows: auto;
   overflow: hidden;
 }
 
@@ -88,7 +95,7 @@ html {
 
 #userInput {
   background: #9e9e9e;
-  border: 0;
+  border: none;
   min-width: 0px;
   -webkit-box-flex: 1;
   -ms-flex: 1;
@@ -100,15 +107,17 @@ html {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   -webkit-appearance: unset;
-  height: 60px;
+  height: 70px;
   margin-right: -5px;
   box-shadow: inset 0 0 10px #000000;
-  font-size: 30px;
+  font-size: 20px;
+}
+#userInput:focus {
+  outline: none;
 }
 
 #search {
-  /* font-family: "Luckiest Guy", cursive; */
-  font-size: 30px;
+  font-size: 20px;
   color: rgb(190, 190, 190);
   border: 0;
   border-top-right-radius: 27px;
@@ -122,7 +131,7 @@ html {
   );
   background-image: linear, left top, right top, from(#c5c5c5), to(#353535);
   padding: 0 22px 0 18px;
-  height: 60px;
+  height: 70px;
 }
 
 #search:hover {
@@ -141,6 +150,7 @@ html {
   -webkit-transition-property: transform;
   transition-property: transform;
   z-index: 2;
+  border-radius: 10px;
 }
 .fs:before {
   pointer-events: none;
@@ -158,12 +168,7 @@ html {
     rgba(0, 0, 0, 0.35) 0%,
     rgba(0, 0, 0, 0) 80%
   );
-  background: radial-gradient(
-    ellipse at center,
-    rgba(0, 0, 0, 0.35) 0%,
-    rgba(0, 0, 0, 0) 80%
-  );
-  /* W3C */
+
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   -webkit-transition-property: transform, opacity;
@@ -172,14 +177,18 @@ html {
 .fs:hover,
 .fs:focus,
 .fs:active {
-  z-index: 2;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 1);
+  color: #353535;
+  background: #999898;
+  z-index: 5;
   -webkit-transform: translateY(-5px);
-  transform: translateY(-5px);
+  transform: translateY(-9px);
   /* move the element up by 5px */
 }
 .fs:hover:before,
 .fs:focus:before,
 .fs:active:before {
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 1);
   z-index: 2;
   opacity: 1;
   -webkit-transform: translateY(5px);
@@ -190,4 +199,23 @@ html {
 #content {
   height: 500px;
   width: 98%;
+  border-radius: 25px;
+  border: 5px solid rgb(56, 56, 56);
+}
+
+.resultPanel {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  margin: 20px;
+  border-top: 5px solid rgb(172, 172, 172);
+  padding: 10px;
+  height: 200px;
+  overflow: initial;
+}
+
+.giphy,
+.movie {
+  padding: 20px;
+  overflow: initial;
+  font-size: 20px;
 }

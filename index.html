@@ -37,67 +37,45 @@
       id="header-section"
     >
       <div class="header-row panel" id="margin-row">
-        <div class="text-center" style="border:3px solid #6d6e6e;" id="name">
+        <div class="text-center" id="name">
           <h1 class="text-dark">
             GifTastic
-            <span class="badge bg-secondary" style="color:white">Tian Qin</span>
+            <span class="badge bg-secondary mt-2" style="color:white"
+              >Tian Qin</span
+            >
           </h1>
         </div>
 
         <form id="search-form">
-          <input type="search" id="userInput" />
+          <input
+            type="text"
+            id="userInput"
+            value=""
+            placeholder="TYPE ANY CITY HERE"
+          />
           <input id="search" type="submit" value="GIF IT and MOVIE IT!" />
         </form>
       </div>
     </div>
-    <div class="container-fluid" id="button-list">
-      <button class="button-generated fs col-3 col-sm-3 col-md-2 col-lg-1">
-        fsfsdfdsfdsf
-      </button>
-      <button class="button-generated fs col-3 col-sm-3 col-md-2 col-lg-1">
-        fsfsdfdsfdsf
-      </button>
-      <button class="button-generated fs col-3 col-sm-3 col-md-2 col-lg-1">
-        fsfsdfdsfdsf
-      </button>
-      <button class="button-generated fs col-3 col-sm-3 col-md-2 col-lg-1">
-        fsfsdfdsfdsf
-      </button>
-      <button class="button-generated fs col-3 col-sm-3 col-md-2 col-lg-1">
-        fsfsdfdsfdsf
-      </button>
-      <button class="button-generated fs col-3 col-sm-3 col-md-2 col-lg-1">
-        fsfsdfdsfdsf
-      </button>
-      <button class="button-generated fs col-3 col-sm-3 col-md-2 col-lg-1">
-        fsfsdfdsfdsf
-      </button>
-      <button class="button-generated fs col-3 col-sm-3 col-md-2 col-lg-1">
-        fsfsdfdsfdsf
-      </button>
-      <button class="button-generated fs col-3 col-sm-3 col-md-2 col-lg-1">
-        fsfsdfdsfdsf
-      </button>
-      <button class="button-generated fs col-3 col-sm-3 col-md-2 col-lg-1">
-        fsfsdfdsfdsf
-      </button>
-      <button class="button-generated fs col-3 col-sm-3 col-md-2 col-lg-1">
-        fsfsdfdsfdsf
-      </button>
-      <button class="button-generated fs col-3 col-sm-3 col-md-2 col-lg-1">
-        fsfsdfdsfdsf
-      </button>
-      <button class="button-generated fs col-3 col-sm-3 col-md-2 col-lg-1">
-        fsfsdfdsfdsf
-      </button>
-      <button class="button-generated fs col-3 col-sm-3 col-md-2 col-lg-1">
-        fsfsdfdsfdsf
-      </button>
-      <button class="button-generated fs col-3 col-sm-3 col-md-2 col-lg-1">
-        fsfsdfdsfdsf
-      </button>
+    <div class="container-fluid" id="button-list"></div>
+    <div class="panel m-auto" id="content">
+      <div class="resultPanel">
+        <div class="giphy">
+          <img
+            src="https://media.giphy.com/media/l3mZcxZKIQemTeT9S/giphy.gif"
+            alt=""
+          />
+        </div>
+        <div class="movie">
+          <p class="movieDetail">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+            veritatis eius rem, laborum itaque explicabo facere. Eveniet
+            possimus quia tenetur blanditiis culpa, alias laudantium error
+            suscipit cumque eligendi mollitia repellat.
+          </p>
+        </div>
+      </div>
     </div>
-    <div class="panel m-auto" id="content"></div>
 
     <script src="../GifTastic/javascript/app.js"></script>
     <script
