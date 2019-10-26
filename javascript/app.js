@@ -22,7 +22,7 @@ function generateButton() {
     var button = $("<button>");
     $(button).text(city);
     $(button).click(() => {
-      searchGifandMovie(this.text);
+      searchGifandMovie(city);
     });
     $("#button-list").append(button);
     button.addClass("button-generated fs col-3 col-sm-3 col-md-2 col-lg-1");
@@ -44,3 +44,23 @@ $("#search").click(event => {
   }
   console.log(Location);
 });
+
+function searchGifandMovie(anyCity) {
+  let gifName = anyCity;
+  let queryUrlGif =
+    "https://api.giphy.com/v1/gifs/search?q=" +
+    gifName +
+    "&api_key=5gOIQ53jSPuWg25UaMaTZuEzaXPZ8qBF&limit=10";
+  $.ajax({
+    url: queryUrlGif,
+    method: "GET"
+  }).then(response => {
+    console.log(response);
+    for (let i = 0; i < 10; i++) {
+      var eachGiphy = $("<img>");
+      eachGiphy.addClass("each-giphy");
+      eachGiphy.attr("src", response.data[i].images.fixed_height.url);
+      $(".giphy").prepend(eachGiphy);
+    }
+  });
+}
