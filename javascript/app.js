@@ -36,17 +36,11 @@ $("#search").click(event => {
   var searchContent = $("#userInput")
     .val()
     .trim();
-  if (searchContent) {
+  if (searchContent && !Location.includes(searchContent)) {
     $("#userInput").val("");
-
     $("#button-list").empty();
     Location.push(searchContent);
     generateButton(Location);
   }
   console.log(Location);
 });
-
-
-searchGifandMovie(cityName){
-
-}
