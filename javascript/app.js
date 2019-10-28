@@ -1,21 +1,3 @@
-// let Countries = [
-//   "New York",
-//   "Los Angeles",
-//   "Chicago",
-//   "Boston",
-//   "Detroit",
-//   "Miami",
-//   "Seattle",
-//   "Houston",
-//   "Denver",
-//   "Cleveland",
-//   "Madison",
-//   "Portland",
-//   "Las Vegas",
-//   "Philadelphia",
-//   "Washington",
-//   "Dallas"
-// ];
 let Countries = [
   "australia",
   "usa",
@@ -103,6 +85,9 @@ function searchGifandMovie(anycountry) {
       var favBtn = $("<button>");
       favBtn.html("<i class='fas fa-heart'></i>");
       favBtn.addClass("favbtn");
+      $(favBtn).click(function() {
+        $(this).toggleClass("favbtn-clicked");
+      });
 
       $(".giphy")
         .prepend(favBtn)

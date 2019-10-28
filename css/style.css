@@ -3,8 +3,6 @@
 }
 
 @media screen and (max-width: 550px) {
-  #name {
-  }
   #margin-row {
     display: grid;
     grid-template-columns: 1fr;
@@ -37,7 +35,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto; */
     margin: 20px;
-    height: 200px;
+    /* height: 200px; */
   }
 
   .movie,
@@ -60,8 +58,8 @@
 
 body,
 html {
-  color: rgb(58, 58, 58);
-  background-color: rgb(142, 142, 147);
+  color: rgb(44, 44, 44);
+  background-color: rgba(24, 24, 24, 0.822);
 }
 
 .button-generated {
@@ -70,7 +68,7 @@ html {
   font-size: 20px;
   margin: 15px 6px;
   overflow: hidden;
-  background-color: #353535;
+  background-color: #525252;
   color: rgb(190, 184, 184);
   border: none;
   text-transform: capitalize;
@@ -79,14 +77,14 @@ html {
 #name {
   /* width: 100%; */
   overflow: initial;
-  border: 3px solid rgb(75, 74, 74);
+  border: 3px solid rgb(54, 54, 54);
   border-radius: 15px;
 }
 .panel {
   overflow-x: auto;
   box-sizing: border-box;
 
-  background: rgba(58, 58, 60, 0.521);
+  background: rgb(121, 121, 121);
   border-radius: 25px;
 }
 
@@ -103,8 +101,8 @@ html {
 
   padding: 10px;
   overflow: hidden;
-  border-top: 5px solid rgb(56, 56, 56);
-  border-bottom: 5px solid rgb(56, 56, 56);
+  border-top: 5px solid rgb(219, 179, 0);
+  border-bottom: 5px solid rgb(219, 179, 0);
 }
 
 .header-section {
@@ -118,10 +116,10 @@ html {
 #margin-row {
   box-sizing: border-box;
   display: grid;
-  background: rgba(128, 128, 128, 0.521);
+  background: rgba(134, 134, 134, 0.521);
   padding: 10px;
   grid-template-columns: 2fr 3fr;
-  border: 5px solid rgb(56, 56, 56);
+  border: 5px solid rgb(219, 179, 0);
   width: 98%;
   /* box-shadow: black;
   box-shadow: 0 0 6px 4px rgba(17, 17, 17, 0.521); */
@@ -219,9 +217,9 @@ html {
 .fs:hover,
 .fs:focus,
 .fs:active {
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 1);
-  color: #353535;
-  background: #999898;
+  box-shadow: 0 0 2px 2px rgb(214, 175, 0);
+  color: rgb(219, 179, 0);
+  background: #2e2e2e;
   z-index: 5;
   -webkit-transform: translateY(-5px);
   transform: translateY(-9px);
@@ -230,7 +228,7 @@ html {
 .fs:hover:before,
 .fs:focus:before,
 .fs:active:before {
-  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 1);
+  box-shadow: 0 0 5px 5px rgb(212, 191, 0);
   z-index: 2;
   opacity: 1;
   -webkit-transform: translateY(5px);
@@ -239,10 +237,9 @@ html {
 }
 
 #content {
-  height: 500px;
   width: 98%;
   border-radius: 25px;
-  border: 5px solid rgb(56, 56, 56);
+  border: 5px solid rgb(219, 179, 0);
 }
 
 .resultPanel {
@@ -259,7 +256,7 @@ html {
   position: relative;
   overflow: initial;
   font-size: 20px;
-  border: 4px solid rgba(59, 59, 59, 0.521);
+  border: 4px solid rgb(219, 179, 0);
   border-radius: 15px;
 }
 
@@ -269,6 +266,8 @@ html {
   grid-template-columns: 1fr;
   color: rgb(218, 171, 42);
   background-color: rgb(59, 59, 59);
+  margin-right: 10px;
+  margin-bottom: 20px;
 }
 
 .movie-photo {
@@ -279,19 +278,20 @@ html {
 
 .movie-title {
   color: rgb(247, 247, 247);
-  background-color: #272727;
+  background-color: rgb(219, 179, 0);
+  line-height: 60px;
   text-align: center;
   border-radius: 10px;
 }
 
 .movie-detail {
-  background-color: rgb(192, 192, 192);
-  color: rgba(59, 59, 59, 0.521);
+  background-color: rgb(46, 46, 46);
+  color: rgb(219, 179, 0);
   text-align: center;
   border-radius: 10px;
   margin-bottom: 100px;
   padding: 15px;
-  border: 5px solid rgb(46, 46, 46);
+  border: 5px solid rgb(219, 179, 0);
 }
 
 .favbtn {
@@ -302,11 +302,14 @@ html {
   margin-bottom: 50px;
   text-align: center;
   background-color: transparent;
-  border: 3px solid white;
+  /* border: 3px solid white; */
+  border: none;
+  outline: none;
 }
 
 .favbtn:hover {
-  color: red;
+  border: 3px solid red;
+  border-radius: 40px;
 }
 
 #imdb-logo {
@@ -324,4 +327,12 @@ html {
 
 .each-rating {
   margin-bottom: 0;
+}
+
+.favbtn-clicked {
+  color: red;
+  border: none;
+}
+.favbtn:focus {
+  outline: none;
 }
