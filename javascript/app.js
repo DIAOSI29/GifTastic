@@ -100,7 +100,12 @@ function searchGifandMovie(anycountry) {
       rating.addClass("each-rating");
       rating.text("RATING: " + response.data[i].rating);
 
+      var favBtn = $("<button>");
+      favBtn.html("<i class='fas fa-heart'></i>");
+      favBtn.addClass("favbtn");
+
       $(".giphy")
+        .prepend(favBtn)
         .prepend(rating)
         .prepend(eachGiphy);
     }

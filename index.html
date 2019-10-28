@@ -28,7 +28,10 @@
       href="https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap"
       rel="stylesheet"
     />
-
+    <script
+      src="https://kit.fontawesome.com/a1562d6d36.js"
+      crossorigin="anonymous"
+    ></script>
     <title>GifTastic</title>
   </head>
   <body>
@@ -55,8 +58,20 @@
     <div class="container-fluid" id="button-list"></div>
     <div class="panel m-auto" id="content">
       <div class="resultPanel">
-        <div class="giphy celarfix"></div>
-        <div class="movie"></div>
+        <div class="giphy celarfix">
+          <img
+            src="../GifTastic/images/giphy-icon.svg"
+            id="giphy-logo"
+            alt=""
+          />
+        </div>
+        <div class="movie">
+          <i
+            class="fab fa-imdb"
+            id="imdb-logo"
+            style="color:rgb(250, 192, 0)"
+          ></i>
+        </div>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
