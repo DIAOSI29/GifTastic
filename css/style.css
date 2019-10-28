@@ -1,6 +1,21 @@
 * {
   overflow-x: hidden;
 }
+
+@media screen and (max-width: 550px) {
+  #name {
+  }
+  #margin-row {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  #search-form {
+    font-size: 10px;
+    display: grid;
+    grid-column: 1fr;
+  }
+}
+
 @media screen and (max-width: 768px) {
   #name {
     position: relative;
@@ -16,6 +31,31 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: 1fr 1fr;
+  }
+  .resultPanel {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    margin: 20px;
+    height: 200px;
+    overflow: scroll;
+  }
+
+  .giphy .movie,
+  .giphy {
+    display: block;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 898px) {
+  .resultPanel {
+    grid-template-columns: 5fr 3fr;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .resultPanel {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -60,7 +100,7 @@ html {
   background: rgba(59, 59, 59, 0.521);
   padding: 5px;
   box-sizing: border-box;
-  background: rgba(58, 58, 60, 0.521);
+
   padding: 10px;
   overflow: hidden;
   border-top: 5px solid rgb(56, 56, 56);
@@ -133,7 +173,9 @@ html {
   padding: 0 22px 0 18px;
   height: 70px;
 }
-
+#search:focus {
+  outline: none;
+}
 #search:hover {
   box-shadow: 0 0 6px 1px rgba(17, 17, 17, 0.521);
 }
@@ -205,12 +247,10 @@ html {
 
 .resultPanel {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr; */
   margin: 20px;
-  border-top: 5px solid rgb(172, 172, 172);
-  padding: 10px;
-  height: 200px;
-  overflow: initial;
+
+  overflow: hidden;
 }
 
 .giphy,
@@ -218,13 +258,36 @@ html {
   padding: 20px;
   overflow: initial;
   font-size: 20px;
-  display: grid;
+  border: 4px solid rgba(59, 59, 59, 0.521);
+  border-radius: 15px;
 }
 
 .giphy {
+  display: grid;
   grid-template-columns: 1fr;
+  color: rgb(218, 171, 42);
+  background-color: rgb(59, 59, 59);
 }
 
-.each-giphy {
-  margin-bottom: 20px;
+.movie-photo {
+  width: 100%;
+  margin: 10px;
+  background-size: cover;
+}
+
+.movie-title {
+  color: rgb(247, 247, 247);
+  background-color: #272727;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.movie-detail {
+  background-color: rgb(192, 192, 192);
+  color: rgba(59, 59, 59, 0.521);
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 100px;
+  padding: 15px;
+  border: 5px solid rgb(46, 46, 46);
 }
