@@ -1,28 +1,46 @@
-let Location = [
-  "New York",
-  "Los Angeles",
-  "Chicago",
-  "Boston",
-  "Detroit",
-  "Miami",
-  "Seattle",
-  "Houston",
-  "Denver",
-  "Cleveland",
-  "Madison",
-  "Portland",
-  "Las Vegas",
-  "Philadelphia",
-  "Washington",
-  "Dallas"
+// let Countries = [
+//   "New York",
+//   "Los Angeles",
+//   "Chicago",
+//   "Boston",
+//   "Detroit",
+//   "Miami",
+//   "Seattle",
+//   "Houston",
+//   "Denver",
+//   "Cleveland",
+//   "Madison",
+//   "Portland",
+//   "Las Vegas",
+//   "Philadelphia",
+//   "Washington",
+//   "Dallas"
+// ];
+let Countries = [
+  "australia",
+  "usa",
+  "japan",
+  "korea",
+  "malaysia",
+  "england",
+  "india",
+  "china",
+  "germany",
+  "france",
+  "iceland",
+  "singapore",
+  "spain",
+  "italy",
+  "sweden",
+  "russia"
 ];
 
 function generateButton() {
-  for (let city of Location) {
+  for (let country of Countries) {
     var button = $("<button>");
-    $(button).text(city);
+    $(button).text(country);
     $(button).click(() => {
-      searchGifandMovie(city);
+      searchGifandMovie(country);
     });
     $("#button-list").append(button);
     button.addClass("button-generated fs col-3 col-sm-3 col-md-2 col-lg-1");
@@ -35,18 +53,19 @@ $("#search").click(event => {
   event.preventDefault();
   var searchContent = $("#userInput")
     .val()
-    .trim();
-  if (searchContent && !Location.includes(searchContent)) {
+    .trim()
+    .toLowerCase();
+  if (searchContent && !Countries.includes(searchContent)) {
     $("#userInput").val("");
     $("#button-list").empty();
-    Location.push(searchContent);
-    generateButton(Location);
+    Countries.push(searchContent);
+    generateButton(Countries);
   }
-  console.log(Location);
+  console.log(Countries);
 });
 
-function searchGifandMovie(anyCity) {
-  let gifName = anyCity;
+function searchGifandMovie(anycountry) {
+  let gifName = anycountry;
   let queryUrlGif =
     "https://api.giphy.com/v1/gifs/search?q=" +
     gifName +
@@ -87,7 +106,7 @@ function searchGifandMovie(anyCity) {
     }
   });
 
-  let movieName = anyCity;
+  let movieName = anycountry;
   var queryUrlMovie =
     "https://www.omdbapi.com/?t=" + movieName + "&apikey=trilogy";
   $.ajax({

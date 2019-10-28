@@ -74,6 +74,7 @@ html {
   background-color: #353535;
   color: rgb(190, 184, 184);
   border: none;
+  text-transform: capitalize;
 }
 
 #name {
