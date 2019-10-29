@@ -258,6 +258,7 @@ html {
   font-size: 20px;
   border: 4px solid rgb(219, 179, 0);
   border-radius: 15px;
+  margin-bottom: 20px;
 }
 
 .giphy {
@@ -267,7 +268,6 @@ html {
   color: rgb(218, 171, 42);
   background-color: rgb(59, 59, 59);
   margin-right: 10px;
-  margin-bottom: 20px;
 }
 
 .movie-photo {
