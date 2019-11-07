@@ -86,16 +86,7 @@ function searchGifandMovie(anycountry) {
       rating.addClass("each-rating");
       rating.text("RATING: " + response.data[i].rating);
 
-      //added fav button for saving giphy image into local storage//
-      var favBtn = $("<button>");
-      favBtn.html("<i class='fas fa-heart'></i>");
-      favBtn.addClass("favbtn");
-      $(favBtn).click(function() {
-        $(this).toggleClass("favbtn-clicked");
-      });
-
       $(".giphy")
-        .prepend(favBtn)
         .prepend(rating)
         .prepend(eachGiphy);
     }
